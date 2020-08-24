@@ -1,2 +1,5 @@
 config
 timerun.txt
+*.html
+*.log
+result
