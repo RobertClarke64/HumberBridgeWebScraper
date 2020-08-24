@@ -5,7 +5,6 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 import time
-import pandas as pd
 from twilio.rest import Client
 from datetime import datetime
 
