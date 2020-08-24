@@ -1,7 +1,6 @@
 # import libraries
 import re
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 import time
 from twilio.rest import Client
 from datetime import datetime
@@ -90,9 +89,9 @@ if __name__ == "__main__":
     checkConfig()
 
     urlpage = 'https://www.humbertag.com/portal/pages/info/info_home/publicHome.jsf'
-    options = Options()
-    options.headless = True
-    driver = webdriver.Firefox(options=options)
+    options = webdriver.ChromeOptions()
+    options.add_argument('headless')
+    driver = webdriver.Chrome(options=options)
 
     driver.get(urlpage)
     driver.execute_script("""
