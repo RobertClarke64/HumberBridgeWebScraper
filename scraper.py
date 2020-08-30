@@ -127,6 +127,7 @@ if __name__ == "__main__":
         print("Debt to pay: %s" %(debtAmount))
         sendText(debtAmount)
 
+    now = datetime.now()
     file = open("timerun.txt", "a+")
-    file.write(str(datetime.now().time()) + "\t\t" + debt + "\n")
+    file.write(str(now.date()) + " " + str(now.time()) + "\t\t" + debt + "\n")
     file.close()
